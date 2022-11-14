@@ -1,40 +1,86 @@
 function getComputerChoice()
 {
-    const random = ["Rock", "Paper", "Scissors"];
+    const random = ["rock", "paper", "scissors"];
     return random[Math.floor(Math.random() * 3)]
 }
 
-function singleRound(playerSelection, pcSelection)
+function playRound(playerSelection, pcSelection)
 {
     if (playerSelection === pcSelection)
     {
-        return "Draw!";
+        console.log("Round Draw!");
+        return "draw";
     }
     else if (playerSelection === "rock" && pcSelection === "scissors")
     {
-        return "You win! Rock beats Scissors";
+        console.log("Round won! Rock beats Scissors.");
+        return "win";
     }
     else if (playerSelection === "rock" && pcSelection === "paper")
     {
-        return "You lose! Paper beats Rock";
+        console.log("Round lost! Paper beats Rock.");
+        return "lose";
     }
     else if (playerSelection === "paper" && pcSelection === "scissors")
     {
-        return "Player lose! Scissors beats Paper";
+        console.log("Round lost! Scissors beats Paper.");
+        return "lose";
     }
     else if (playerSelection === "paper" && pcSelection === "rock")
     {
-        return "Player Win! Paper beats Rock";
+        console.log("Round won! Paper beats Rock.");
+        return "win";
     }
     else if (playerSelection === "scissors" && pcSelection === "paper")
     {
-        return "Player win! Scissors beats Paper";
+        console.log("Round won! Scissors beats Paper.");
+        return "win";
     }
     else if (playerSelection === "scissors" && pcSelection === "rock")
     {
-        return "Player lose! Rock beats Scissors";
+        console.log("Round lost! Rock beats Scissors.");
+        return "lose";
     }
 }
 
-const playerSelection = prompt("Rock Paper or Scissors?")
-const pcSelection = getComputerChoice();
+function game()
+{
+    let pcScore = 0;
+    let playerScore = 0;
+
+    for (let i = 0; i < 5; i++)
+    {
+        result = playRound(prompt("Rock, Paper or Scissors?").toLowerCase(), getComputerChoice());
+        if (result === "lose")
+        {
+            pcScore++;
+            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
+        }
+        else if (result === "win")
+        {
+            playerScore++;
+            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
+        }
+        else
+        {
+            pcScore++;
+            playerScore++;
+            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
+        }
+    }
+
+    if (playerScore > pcScore)
+    {
+        return "You Win!";
+    }
+    else if (playerScore < pcScore)
+    {
+        return "You lose!";
+    }
+    else
+    {
+        return "Draw!";
+    }
+}
+
+console.log(game());
