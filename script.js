@@ -1,3 +1,11 @@
+// Add eventlistener and execute playround on click
+const btns = document.querySelectorAll("body button");
+btns.forEach(btn => btn.addEventListener("click", (e) => {
+    console.log(e.target.id);
+    playRound(e.target.id, getComputerChoice());
+}));
+
+// Game logic
 function getComputerChoice()
 {
     const random = ["rock", "paper", "scissors"];
@@ -43,44 +51,25 @@ function playRound(playerSelection, pcSelection)
     }
 }
 
-function game()
-{
-    let pcScore = 0;
-    let playerScore = 0;
+// function game(playRound())
+// {
+//     let pcScore = 0;
+//     let playerScore = 0;
 
-    for (let i = 0; i < 5; i++)
-    {
-        result = playRound(prompt("Rock, Paper or Scissors?").toLowerCase(), getComputerChoice());
-        if (result === "lose")
-        {
-            pcScore++;
-            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
-        }
-        else if (result === "win")
-        {
-            playerScore++;
-            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
-        }
-        else
-        {
-            pcScore++;
-            playerScore++;
-            console.log(`Score = (Player - ${playerScore}), (computer - ${pcScore})`);
-        }
-    }
+    
 
-    if (playerScore > pcScore)
-    {
-        return "You Win!";
-    }
-    else if (playerScore < pcScore)
-    {
-        return "You lose!";
-    }
-    else
-    {
-        return "Draw!";
-    }
-}
+//     if (playerScore > pcScore)
+//     {
+//         return "You Win!";
+//     }
+//     else if (playerScore < pcScore)
+//     {
+//         return "You lose!";
+//     }
+//     else
+//     {
+//         return "Draw!";
+//     }
+// }
 
-console.log(game());
+// console.log();
