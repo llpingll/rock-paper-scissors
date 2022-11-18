@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    height: 100%;
+    color: white;
+    background: rgb(36, 36, 36);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tab {
+    height: 160px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.emoji {
+    font-size: 120px;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.selection div {
+    background: rgb(71, 71, 71);
+}

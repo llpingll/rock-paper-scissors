@@ -5,11 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <div class="result">
+        <h2 class="roundResult">Choose your weapon!</h2>
+        <p class="resultDetail">First to score 5 points wins!</p>
+    </div>
+
+    <div class="score">
+        <div class="tab">
+            <div class="emoji pWeapon">🎮</div>
+            <p class="pScore">Player: 0</p>
+        </div>
+        <div class="tab">
+            <div class="emoji pcWeapon">🎮</div>
+            <p class="pcScore">Computer: 0</p>
+        </div>
+    </div>
+
+    <div class="selection">
+        <div id="rock" class="emoji tab">✊</div>
+        <div id="paper" class="emoji tab">✋</div>
+        <div id="scissors" class="emoji tab">✌️</div>
+    </div>
+
+    <footer>
+
+    </footer>
+
 </body>
 </html>
