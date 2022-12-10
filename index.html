@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b68b3f9e8e.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-
-    <div class="result">
-        <h2 class="roundResult">Choose your weapon!</h2>
-        <p class="resultDetail">First to score 5 points wins!</p>
-    </div>
-
-    <div class="score">
-        <div class="tab">
-            <div class="emoji pWeapon">🎮</div>
-            <p class="pScore">Player: 0</p>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+        <div class="result">
+            <h2 class="roundResult">Choose your weapon!</h2>
+            <p class="resultDetail">First to score 5 points wins!</p>
         </div>
-        <div class="tab">
-            <div class="emoji pcWeapon">🎮</div>
-            <p class="pcScore">Computer: 0</p>
+        <div class="score">
+            <div class="tab">
+                <div class="emoji pWeapon">🎮</div>
+                <p class="pScore">Player: 0</p>
+            </div>
+            <div class="tab">
+                <div class="emoji pcWeapon">🎮</div>
+                <p class="pcScore">Computer: 0</p>
+            </div>
         </div>
-    </div>
-
-    <div class="selection">
-        <div id="rock" class="emoji tab">✊</div>
-        <div id="paper" class="emoji tab">✋</div>
-        <div id="scissors" class="emoji tab">✌️</div>
-    </div>
-
-    <div class="modalContainer">
-        <div class="modal">
-            <h1 class="announce">Announcement</h1>
-            <button class="playAgain">Play again</button>
+        <div class="selection">
+            <div id="rock" class="emoji tab">✊</div>
+            <div id="paper" class="emoji tab">✋</div>
+            <div id="scissors" class="emoji tab">✌️</div>
+        </div>
+        <div class="modalContainer">
+            <div class="modal">
+                <h1 class="announce">Announcement</h1>
+                <button class="playAgain">Play again</button>
+            </div>
         </div>
     </div>
 
-    <footer>
-
+    <footer class="footer">
+        <p>||ping|| © <script>document.write(new Date().getFullYear())</script>
+        <a href="https://https://github.com/llpingll" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </p>
     </footer>
 
 </body>
